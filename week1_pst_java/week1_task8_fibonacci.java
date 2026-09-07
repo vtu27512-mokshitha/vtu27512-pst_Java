@@ -1,5 +1,5 @@
 import java.util.*;
-class task8 {
+class week1_task8_fibonacci {
     public static void main(String args[]){
         Scanner sc= new Scanner (System.in);
         int a=0;

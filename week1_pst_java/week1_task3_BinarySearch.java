@@ -1,4 +1,4 @@
-public class task3 {
+public class week1_task3_BinarySearch {
 
     // Function to perform Binary Search
     static int binarySearch(int[] arr, int x) {

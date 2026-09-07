@@ -1,5 +1,5 @@
 import java.util.*;
-class task2{
+class week1_task1_indexOfArray{
 
 
 public static void main(String args[]){

@@ -1,5 +1,5 @@
 import java.util.*;
-class task4 {
+class week1_task4_MaxElementinArray {
     public static void main(String args[]){
         Scanner sc=new Scanner (System.in);
         int n=sc.nextInt();
