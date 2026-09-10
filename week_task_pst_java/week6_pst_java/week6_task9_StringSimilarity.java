@@ -1,4 +1,4 @@
-public class StringSimilarity {
+public class week6_task9_StringSimilarity {
     public static long stringSimilarity(String s) {
         int n = s.length();
         int[] z = new int[n];

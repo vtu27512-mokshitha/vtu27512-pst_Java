@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CircularPalindromes {
+public class week6_task1_CircularPalindromes {
     public static List<Integer> circularPalindromes(String s) {
         int n = s.length();
         List<Integer> result = new ArrayList<>();

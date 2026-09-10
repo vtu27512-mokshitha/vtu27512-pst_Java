@@ -1,4 +1,4 @@
-public class PalindromeIndex {
+public class week6_task6_PalindromeIndex {
     public static int palindromeIndex(String s) {
         int left = 0;
         int right = s.length() - 1;

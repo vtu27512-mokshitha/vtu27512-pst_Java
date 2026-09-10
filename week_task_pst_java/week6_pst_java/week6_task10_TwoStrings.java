@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class TwoStrings {
+public class week6_task10_TwoStrings {
     public static String twoStrings(String s1, String s2) {
         Set<Character> set1 = new HashSet<>();
         for (char c : s1.toCharArray()) {

@@ -1,4 +1,4 @@
-public class LongestPalindromicSubstring {
+public class week6_task4_LongestPalindromicSubstring {
     public static String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
         int start = 0, end = 0;

@@ -1,4 +1,4 @@
-public class MarsExploration {
+public class week6_task5_MarsExploration {
     public static int marsExploration(String s) {
         int count = 0;
         String target = "SOS";

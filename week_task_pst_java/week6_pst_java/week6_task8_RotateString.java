@@ -1,4 +1,4 @@
-public class RotateString {
+public class week6_task8_RotateString {
     public static boolean rotateString(String s, String goal) {
         return s.length() == goal.length() && (s + s).contains(goal);
     }

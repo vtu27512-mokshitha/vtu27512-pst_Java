@@ -1,4 +1,4 @@
-public class FindTheIndexOfTheFirstOccurrenceInAString {
+public class week6_task3_FindTheIndexOfTheFirstOccurrenceInAString {
     public static int strStr(String haystack, String needle) {
         return haystack.indexOf(needle);
     }
