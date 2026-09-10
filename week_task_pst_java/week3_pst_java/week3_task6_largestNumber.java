@@ -22,7 +22,7 @@ class Solution {
          return result;
     }
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        week3_task9_findDay solution = new week3_task9_findDay();
         int[] nums = {3, 30, 34, 5, 9};
         String largestNum = solution.largestNumber(nums);
         System.out.println(largestNum); 

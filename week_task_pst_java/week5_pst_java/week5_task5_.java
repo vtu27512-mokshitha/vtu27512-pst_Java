@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class NaivePatternSearch {
+public class week5_task5_ {
 
     // Function to search for all occurrences of pattern in text
     public static List<Integer> search(String pat, String txt) {

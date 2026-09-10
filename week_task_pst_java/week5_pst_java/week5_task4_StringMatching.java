@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class StringMatching {
+public class week5_task4_StringMatching {
 
     public static List<String> stringMatching(String[] words) {
 

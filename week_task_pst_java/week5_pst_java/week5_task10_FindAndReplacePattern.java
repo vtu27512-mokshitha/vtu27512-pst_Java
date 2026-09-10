@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FindAndReplacePattern {
+public class week5_task10_FindAndReplacePattern {
 
     public static boolean matchesPattern(String word, String pattern) {
 

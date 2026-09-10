@@ -1,4 +1,4 @@
-public class MaximumSubarray {
+public class week5_task8_MaximumSubarray {
 
     public static int maxSubarrayBrute(int[] arr) {
         int maxSum = Integer.MIN_VALUE;

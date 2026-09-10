@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class StringToInteger {
+public class week5_task3_StringToInteger {
 
     public static int myAtoi(String s) {
 

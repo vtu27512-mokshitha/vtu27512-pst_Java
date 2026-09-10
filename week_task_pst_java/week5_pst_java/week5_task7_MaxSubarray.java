@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MaxSubarray {
+public class week5_task7_MaxSubarray {
 
     public static List<Integer> maxSubarray(List<Integer> arr) {
 

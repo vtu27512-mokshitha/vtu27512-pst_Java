@@ -1,5 +1,5 @@
 import java.util.*;
-public class TransposeMatrix {
+public class week4_task5_TransposeMatrix {
     
     public int[][] transpose(int[][] matrix) {
         int rows=matrix.length;
@@ -15,7 +15,7 @@ public class TransposeMatrix {
         return res;
     }
     public static void main(String[] args) {
-        TransposeMatrix obj = new TransposeMatrix();
+        week4_task5_TransposeMatrix obj = new week4_task5_TransposeMatrix();
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int m=sc.nextInt();

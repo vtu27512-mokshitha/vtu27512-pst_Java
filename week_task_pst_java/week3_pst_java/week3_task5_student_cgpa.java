@@ -78,7 +78,7 @@ class Priorities {
     }
 }
 
-public class task5 {
+public class week3_task5_student_cgpa {
 
     public static void main(String[] args) {
 

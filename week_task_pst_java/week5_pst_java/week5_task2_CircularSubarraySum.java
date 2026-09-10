@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class CircularSubarraySum {
+public class week5_task2_CircularSubarraySum {
 
     public static int maxSubarraySumCircular(int[] nums) {
 

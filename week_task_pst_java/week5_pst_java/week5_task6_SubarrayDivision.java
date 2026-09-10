@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SubarrayDivision {
+public class week5_task6_SubarrayDivision {
 
     public static int birthday(List<Integer> s, int d, int m) {
         int count = 0;

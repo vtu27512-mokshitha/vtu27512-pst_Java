@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class task3 {
+public class week3_task3_queriestask3 {
 
     public static void main(String[] args) {
 
