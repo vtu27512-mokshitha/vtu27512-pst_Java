@@ -1,44 +1,29 @@
-import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class week3_task3_queriestask3 {
-
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
 
-        // Read the lines
         for (int i = 0; i < n; i++) {
-
             int size = sc.nextInt();
-
             ArrayList<Integer> row = new ArrayList<>();
-
             for (int j = 0; j < size; j++) {
                 row.add(sc.nextInt());
             }
-
             list.add(row);
         }
 
-        // Number of queries
         int q = sc.nextInt();
-
         for (int i = 0; i < q; i++) {
-
             int x = sc.nextInt();
             int y = sc.nextInt();
 
-            // x and y are 1-based
-            if (x >= 1 && x <= list.size() &&
-                y >= 1 && y <= list.get(x - 1).size()) {
-
+            if (x >= 1 && x <= list.size() && y >= 1 && y <= list.get(x - 1).size()) {
                 System.out.println(list.get(x - 1).get(y - 1));
-
             } else {
                 System.out.println("ERROR!");
             }
