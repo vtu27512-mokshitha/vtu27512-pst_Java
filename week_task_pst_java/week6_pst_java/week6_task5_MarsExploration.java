@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class week6_task5_MarsExploration {
     public static int marsExploration(String s) {
         int count = 0;
@@ -11,22 +13,13 @@ public class week6_task5_MarsExploration {
     }
 
     public static void main(String[] args) {
-        String s1 = "SOSSPSSQSSOR";
-        System.out.println("Input 1: " + s1);
-        System.out.println("Output 1: " + marsExploration(s1));
-
-        String s2 = "SOSSOT";
-        System.out.println("Input 2: " + s2);
-        System.out.println("Output 2: " + marsExploration(s2));
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNext()) {
+            String s = sc.next();
+            System.out.println(marsExploration(s));
+        } else {
+            System.out.println(marsExploration("SOSSPSSQSSOR"));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: SOSSPSSQSSOR
-Output 1: 3
-
-Input 2: SOSSOT
-Output 2: 1
-*/

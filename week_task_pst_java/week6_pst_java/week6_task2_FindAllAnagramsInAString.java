@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class week6_task2_FindAllAnagramsInAString {
     public static List<Integer> findAnagrams(String s, String p) {
@@ -32,22 +33,15 @@ public class week6_task2_FindAllAnagramsInAString {
     }
 
     public static void main(String[] args) {
-        String s1 = "cbaebabacd", p1 = "abc";
-        System.out.println("Input 1: s = \"" + s1 + "\", p = \"" + p1 + "\"");
-        System.out.println("Output 1: " + findAnagrams(s1, p1));
-
-        String s2 = "abab", p2 = "ab";
-        System.out.println("Input 2: s = \"" + s2 + "\", p = \"" + p2 + "\"");
-        System.out.println("Output 2: " + findAnagrams(s2, p2));
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNext()) {
+            String s = sc.next();
+            String p = sc.next();
+            System.out.println(findAnagrams(s, p));
+        } else {
+            String s1 = "cbaebabacd", p1 = "abc";
+            System.out.println("Output: " + findAnagrams(s1, p1));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: s = "cbaebabacd", p = "abc"
-Output 1: [0, 6]
-
-Input 2: s = "abab", p = "ab"
-Output 2: [0, 1, 2]
-*/

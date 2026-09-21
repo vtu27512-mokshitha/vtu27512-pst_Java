@@ -1,9 +1,12 @@
+import java.util.Scanner;
+
 public class week6_task9_StringSimilarity {
+
     public static long stringSimilarity(String s) {
         int n = s.length();
         int[] z = new int[n];
         int l = 0, r = 0;
-        long totalSimilarity = n;
+        long totalSimilarity = n; // similarity with itself is string length
 
         for (int i = 1; i < n; i++) {
             if (i <= r) {
@@ -23,22 +26,19 @@ public class week6_task9_StringSimilarity {
     }
 
     public static void main(String[] args) {
-        String s1 = "ababaa";
-        System.out.println("Input 1: " + s1);
-        System.out.println("Output 1: " + stringSimilarity(s1));
+        // Built-in verification test cases
+        System.out.println("--- Hardcoded Tests ---");
+        System.out.println("Input: ababaa -> Output: " + stringSimilarity("ababaa")); // Output: 11
+        System.out.println("Input: aa     -> Output: " + stringSimilarity("aa"));     // Output: 3
 
-        String s2 = "aa";
-        System.out.println("Input 2: " + s2);
-        System.out.println("Output 2: " + stringSimilarity(s2));
+        // Optional interactive input
+        System.out.println("\n--- Interactive Test ---");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string: ");
+        if (sc.hasNext()) {
+            String s = sc.next();
+            System.out.println("Total Similarity: " + stringSimilarity(s));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: ababaa
-Output 1: 11
-
-Input 2: aa
-Output 2: 3
-*/

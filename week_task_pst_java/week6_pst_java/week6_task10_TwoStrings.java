@@ -1,7 +1,9 @@
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 public class week6_task10_TwoStrings {
+
     public static String twoStrings(String s1, String s2) {
         Set<Character> set1 = new HashSet<>();
         for (char c : s1.toCharArray()) {
@@ -16,22 +18,21 @@ public class week6_task10_TwoStrings {
     }
 
     public static void main(String[] args) {
-        String s1 = "hello", s2 = "world";
-        System.out.println("Input 1: s1 = " + s1 + ", s2 = " + s2);
-        System.out.println("Output 1: " + twoStrings(s1, s2));
+        // Built-in verification test cases
+        System.out.println("--- Hardcoded Tests ---");
+        System.out.println("Input: s1 = hello, s2 = world -> Output: " + twoStrings("hello", "world")); // Output: YES ('l', 'o')
+        System.out.println("Input: s1 = hi,    s2 = world -> Output: " + twoStrings("hi", "world"));    // Output: NO
 
-        String s3 = "hi", s4 = "world";
-        System.out.println("Input 2: s1 = " + s3 + ", s2 = " + s4);
-        System.out.println("Output 2: " + twoStrings(s3, s4));
+        // Optional interactive input
+        System.out.println("\n--- Interactive Test ---");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string s1: ");
+        if (sc.hasNext()) {
+            String s1 = sc.next();
+            System.out.print("Enter string s2: ");
+            String s2 = sc.next();
+            System.out.println("Result: " + twoStrings(s1, s2));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: s1 = hello, s2 = world
-Output 1: YES
-
-Input 2: s1 = hi, s2 = world
-Output 2: NO
-*/

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class week6_task1_CircularPalindromes {
     public static List<Integer> circularPalindromes(String s) {
@@ -34,15 +35,18 @@ public class week6_task1_CircularPalindromes {
     }
 
     public static void main(String[] args) {
-        String s = "aaaa";
-        System.out.println("Input: " + s);
-        System.out.println("Output: " + circularPalindromes(s));
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNext()) {
+            String s = sc.next();
+            List<Integer> ans = circularPalindromes(s);
+            for (int val : ans) {
+                System.out.println(val);
+            }
+        } else {
+            String s = "aaaa";
+            System.out.println("Default Input: " + s);
+            System.out.println("Output: " + circularPalindromes(s));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input: aaaa
-Output: [4, 4, 4, 4]
-*/

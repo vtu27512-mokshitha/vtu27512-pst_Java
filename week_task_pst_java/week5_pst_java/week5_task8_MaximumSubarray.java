@@ -1,29 +1,28 @@
+import java.util.Scanner;
+
 public class week5_task8_MaximumSubarray {
 
-    public static int maxSubarrayBrute(int[] arr) {
-        int maxSum = Integer.MIN_VALUE;
+    public static int maxSubArray(int[] nums) {
+        int currentSum = nums[0];
+        int maxSum = nums[0];
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i; j < arr.length; j++) {
-
-                int sum = 0;
-
-                for (int k = i; k <= j; k++) {
-                    sum += arr[k];
-                }
-
-                maxSum = Math.max(maxSum, sum);
-            }
+        for (int i = 1; i < nums.length; i++) {
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            maxSum = Math.max(maxSum, currentSum);
         }
-
         return maxSum;
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextInt()) return;
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
 
-        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-
-        System.out.println("Maximum Subarray Sum = "
-                + maxSubarrayBrute(arr));
+        System.out.println(maxSubArray(arr));
+        sc.close();
     }
 }

@@ -1,37 +1,25 @@
 import java.util.*;
 
-public class AlternatingCharacters {
+public class week5_task1_AlternatingCharacters {
 
     public static int alternatingCharacters(String s) {
-
         int deletions = 0;
-
         for (int i = 1; i < s.length(); i++) {
-
             if (s.charAt(i) == s.charAt(i - 1)) {
                 deletions++;
             }
         }
-
         return deletions;
     }
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
-        // Number of test cases
+        if (!sc.hasNextInt()) return;
         int t = sc.nextInt();
-
         while (t-- > 0) {
-
             String s = sc.next();
-
-            int result = alternatingCharacters(s);
-
-            System.out.println(result);
+            System.out.println(alternatingCharacters(s));
         }
-
         sc.close();
     }
 }

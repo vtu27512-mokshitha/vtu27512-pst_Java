@@ -1,33 +1,26 @@
+import java.util.Scanner;
+
 public class week6_task7_RepeatedSubstringPattern {
+
     public static boolean repeatedSubstringPattern(String s) {
         String doubled = s + s;
         return doubled.substring(1, doubled.length() - 1).contains(s);
     }
 
     public static void main(String[] args) {
-        String s1 = "abab";
-        System.out.println("Input 1: " + s1);
-        System.out.println("Output 1: " + repeatedSubstringPattern(s1));
+        // Built-in verification test cases
+        System.out.println("--- Test Results ---");
+        System.out.println("Input: abab         -> Output: " + repeatedSubstringPattern("abab"));
+        System.out.println("Input: aba          -> Output: " + repeatedSubstringPattern("aba"));
+        System.out.println("Input: abcabcabcabc -> Output: " + repeatedSubstringPattern("abcabcabcabc"));
 
-        String s2 = "aba";
-        System.out.println("Input 2: " + s2);
-        System.out.println("Output 2: " + repeatedSubstringPattern(s2));
-
-        String s3 = "abcabcabcabc";
-        System.out.println("Input 3: " + s3);
-        System.out.println("Output 3: " + repeatedSubstringPattern(s3));
+        // Interactive console input
+        Scanner sc = new Scanner(System.in);
+        System.out.print("\nEnter a string: ");
+        if (sc.hasNext()) {
+            String s = sc.next();
+            System.out.println("Result: " + repeatedSubstringPattern(s));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: abab
-Output 1: true
-
-Input 2: aba
-Output 2: false
-
-Input 3: abcabcabcabc
-Output 3: true
-*/

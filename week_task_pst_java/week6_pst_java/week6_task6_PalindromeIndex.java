@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 public class week6_task6_PalindromeIndex {
+
     public static int palindromeIndex(String s) {
         int left = 0;
         int right = s.length() - 1;
@@ -31,29 +34,20 @@ public class week6_task6_PalindromeIndex {
     }
 
     public static void main(String[] args) {
-        String s1 = "aaab";
-        System.out.println("Input 1: " + s1);
-        System.out.println("Output 1: " + palindromeIndex(s1));
+        // Built-in verification test cases
+        System.out.println("--- Hardcoded Tests ---");
+        System.out.println("Input: aaab -> Output: " + palindromeIndex("aaab")); // Output: 3
+        System.out.println("Input: baa  -> Output: " + palindromeIndex("baa"));  // Output: 0
+        System.out.println("Input: aaa  -> Output: " + palindromeIndex("aaa"));  // Output: -1
 
-        String s2 = "baa";
-        System.out.println("Input 2: " + s2);
-        System.out.println("Output 2: " + palindromeIndex(s2));
-
-        String s3 = "aaa";
-        System.out.println("Input 3: " + s3);
-        System.out.println("Output 3: " + palindromeIndex(s3));
+        // Optional interactive input
+        System.out.println("\n--- Interactive Test ---");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        if (sc.hasNext()) {
+            String input = sc.next();
+            System.out.println("Result: " + palindromeIndex(input));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: aaab
-Output 1: 3
-
-Input 2: baa
-Output 2: 0
-
-Input 3: aaa
-Output 3: -1
-*/

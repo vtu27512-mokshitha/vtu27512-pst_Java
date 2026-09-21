@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class week6_task4_LongestPalindromicSubstring {
     public static String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
@@ -26,22 +28,13 @@ public class week6_task4_LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        String s1 = "babad";
-        System.out.println("Input 1: " + s1);
-        System.out.println("Output 1: " + longestPalindrome(s1));
-
-        String s2 = "cbbd";
-        System.out.println("Input 2: " + s2);
-        System.out.println("Output 2: " + longestPalindrome(s2));
+        Scanner sc = new Scanner(System.in);
+        if (sc.hasNext()) {
+            String s = sc.next();
+            System.out.println(longestPalindrome(s));
+        } else {
+            System.out.println(longestPalindrome("babad"));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: babad
-Output 1: bab
-
-Input 2: cbbd
-Output 2: bb
-*/

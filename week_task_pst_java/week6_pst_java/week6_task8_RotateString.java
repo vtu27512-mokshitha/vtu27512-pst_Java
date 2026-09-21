@@ -1,25 +1,26 @@
+import java.util.Scanner;
+
 public class week6_task8_RotateString {
+
     public static boolean rotateString(String s, String goal) {
         return s.length() == goal.length() && (s + s).contains(goal);
     }
 
     public static void main(String[] args) {
-        String s1 = "abcde", goal1 = "cdeab";
-        System.out.println("Input 1: s = " + s1 + ", goal = " + goal1);
-        System.out.println("Output 1: " + rotateString(s1, goal1));
+        // Built-in verification test cases
+        System.out.println("--- Hardcoded Tests ---");
+        System.out.println("Input: s = abcde, goal = cdeab -> Output: " + rotateString("abcde", "cdeab")); // Output: true
+        System.out.println("Input: s = abcde, goal = abced -> Output: " + rotateString("abcde", "abced")); // Output: false
 
-        String s2 = "abcde", goal2 = "abced";
-        System.out.println("Input 2: s = " + s2 + ", goal = " + goal2);
-        System.out.println("Output 2: " + rotateString(s2, goal2));
+        // Optional interactive input
+        System.out.println("\n--- Interactive Test ---");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter string s and goal (separated by space): ");
+        if (sc.hasNext()) {
+            String s = sc.next();
+            String goal = sc.next();
+            System.out.println("Result: " + rotateString(s, goal));
+        }
+        sc.close();
     }
 }
-
-/*
-INPUT & OUTPUT:
-
-Input 1: s = abcde, goal = cdeab
-Output 1: true
-
-Input 2: s = abcde, goal = abced
-Output 2: false
-*/

@@ -1,48 +1,37 @@
 import java.util.*;
 
-public class week5_task5_ {
+public class week5_task5_SearchPattern {
 
-    // Function to search for all occurrences of pattern in text
     public static List<Integer> search(String pat, String txt) {
-
         int m = pat.length();
         int n = txt.length();
-
         List<Integer> ans = new ArrayList<>();
 
-        // Slide the pattern over the text
         for (int i = 0; i <= n - m; i++) {
-
             int j;
-
-            // Compare pattern with text
             for (j = 0; j < m; j++) {
-
                 if (txt.charAt(i + j) != pat.charAt(j)) {
                     break;
                 }
             }
-
-            // If all characters matched
             if (j == m) {
                 ans.add(i);
             }
         }
-
         return ans;
     }
 
     public static void main(String[] args) {
-
-        String txt = "aabaacaadaabaaba";
-        String pat = "aaba";
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNext()) return;
+        String txt = sc.next();
+        String pat = sc.next();
 
         List<Integer> result = search(pat, txt);
-
-        System.out.print("Pattern found at indices: ");
-
-        for (int index : result) {
-            System.out.print(index + " ");
+        for (int i = 0; i < result.size(); i++) {
+            System.out.print(result.get(i) + (i == result.size() - 1 ? "" : " "));
         }
+        System.out.println();
+        sc.close();
     }
 }

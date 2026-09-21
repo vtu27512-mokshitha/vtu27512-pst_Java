@@ -3,45 +3,30 @@ import java.util.*;
 public class week5_task3_StringToInteger {
 
     public static int myAtoi(String s) {
-
         int i = 0;
         int n = s.length();
 
-        // 1. Remove leading spaces
         while (i < n && s.charAt(i) == ' ') {
             i++;
         }
 
-        // 2. Check sign
         int sign = 1;
-
         if (i < n && s.charAt(i) == '-') {
             sign = -1;
             i++;
-        } 
-        else if (i < n && s.charAt(i) == '+') {
+        } else if (i < n && s.charAt(i) == '+') {
             i++;
         }
 
-        // 3. Convert digits
         int result = 0;
-
         while (i < n && Character.isDigit(s.charAt(i))) {
-
             int digit = s.charAt(i) - '0';
 
-            // Check integer overflow
             if (result > (Integer.MAX_VALUE - digit) / 10) {
-
-                if (sign == 1) {
-                    return Integer.MAX_VALUE;
-                } else {
-                    return Integer.MIN_VALUE;
-                }
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             }
 
             result = result * 10 + digit;
-
             i++;
         }
 
@@ -49,16 +34,10 @@ public class week5_task3_StringToInteger {
     }
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a string: ");
+        if (!sc.hasNextLine()) return;
         String s = sc.nextLine();
-
-        int result = myAtoi(s);
-
-        System.out.println("Result: " + result);
-
+        System.out.println(myAtoi(s));
         sc.close();
     }
 }

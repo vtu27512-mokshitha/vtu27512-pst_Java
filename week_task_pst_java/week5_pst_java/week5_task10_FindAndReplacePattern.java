@@ -3,69 +3,45 @@ import java.util.*;
 public class week5_task10_FindAndReplacePattern {
 
     public static boolean matchesPattern(String word, String pattern) {
-
-        // Mapping from word -> pattern
+        if (word.length() != pattern.length()) return false;
         Map<Character, Character> map1 = new HashMap<>();
-
-        // Mapping from pattern -> word
         Map<Character, Character> map2 = new HashMap<>();
 
         for (int i = 0; i < word.length(); i++) {
-
             char w = word.charAt(i);
             char p = pattern.charAt(i);
 
-            // Check word -> pattern mapping
-            if (map1.containsKey(w) && map1.get(w) != p) {
-                return false;
-            }
-
-            // Check pattern -> word mapping
-            if (map2.containsKey(p) && map2.get(p) != w) {
-                return false;
-            }
+            if (map1.containsKey(w) && map1.get(w) != p) return false;
+            if (map2.containsKey(p) && map2.get(p) != w) return false;
 
             map1.put(w, p);
             map2.put(p, w);
         }
-
         return true;
     }
 
-    public static List<String> findAndReplacePattern(
-            String[] words, String pattern) {
-
+    public static List<String> findAndReplacePattern(String[] words, String pattern) {
         List<String> result = new ArrayList<>();
-
         for (String word : words) {
-
             if (matchesPattern(word, pattern)) {
                 result.add(word);
             }
         }
-
         return result;
     }
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
+        if (!sc.hasNextInt()) return;
         int n = sc.nextInt();
-
         String[] words = new String[n];
-
         for (int i = 0; i < n; i++) {
             words[i] = sc.next();
         }
-
         String pattern = sc.next();
 
-        List<String> result =
-                findAndReplacePattern(words, pattern);
-
+        List<String> result = findAndReplacePattern(words, pattern);
         System.out.println(result);
-
         sc.close();
     }
 }
