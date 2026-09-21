@@ -1,26 +1,30 @@
 import java.util.*;
-class ContainsDuplicate {
+
+public class week4_task8_containsDuplicate {
+
     public boolean containsDuplicate(int[] nums) {
-        HashSet<Integer> set=new HashSet<>();
-        for(int i=0;i<nums.length;i++){
-            if(set.contains(nums[i])){
+        HashSet<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            if (set.contains(num)) {
                 return true;
             }
-            set.add(nums[i]);
+            set.add(num);
         }
         return false;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of elements in the array: ");
+        if (!sc.hasNextInt()) return;
+
         int n = sc.nextInt();
         int[] nums = new int[n];
-        System.out.println("Enter the elements of the array:");
         for (int i = 0; i < n; i++) {
             nums[i] = sc.nextInt();
         }
-        ContainsDuplicate cd = new ContainsDuplicate();
-        
-        System.out.println(cd.containsDuplicate(nums)); 
+
+        week4_task8_containsDuplicate cd = new week4_task8_containsDuplicate();
+        System.out.println(cd.containsDuplicate(nums));
+        sc.close();
     }
 }
